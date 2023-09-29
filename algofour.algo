@@ -1,0 +1,19 @@
+FUNCTION palindrome(ch: STRING , i: INTEGER): BOOLEAN
+VAR
+    j: INTEGER
+    ok:BOOLEAN
+BEGIN
+    j := LENGTH(ch);                      // Obtenez la longueur de la chaîne
+    ok := TRUE;                          // Initialisez la variable "ok" à TRUE
+
+     FOR j:=ch lenth -i  STEP -1  DO    // Parcourez la chaîne en partant de la fin
+        IF (ch[i] <> ch[j]) THEN         // Si les caractères ne correspondent pas
+            ok := FALSE               // Définissez "ok" sur FALSE
+        END_IF
+        i := i + 1                  // Avancez l'indice i
+    END_FOR
+
+    RETURN ok                     // Retournez la valeur de "ok" à la fin de la boucle
+END
+
+
